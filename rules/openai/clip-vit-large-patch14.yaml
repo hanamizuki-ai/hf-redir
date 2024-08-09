@@ -1,0 +1,9 @@
+revisions: 
+  - main
+destination:
+  - provider: modelee
+    args:
+      repoName: clip-vit-large-patch14
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/openai-clip-vit-large-patch14
