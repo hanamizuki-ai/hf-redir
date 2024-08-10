@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsx ./.script/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,9 @@
   "dependencies": {
     "@huggingface/hub": "^0.15.1",
     "@types/node": "^22.1.0",
+    "glob": "^11.0.0",
     "tsx": "^4.17.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "yaml": "^2.5.0"
   }
 }

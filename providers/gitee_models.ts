@@ -1,19 +1,19 @@
 import { IProvider } from "../.script/interfaces";
 
-interface ModeleeProviderArgs {
+interface GiteeModelProviderArgs {
     repoName: string;
     commit?: string;
 }
 
-export class ModeleeProvider implements IProvider {
-    identifier = "modelee";
+export default class GiteeModelProvider implements IProvider {
+    identifier = "gitee_models";
 
     toProviderUrl(
         path: string,
         revision: string,
-        { repoName, commit }: ModeleeProviderArgs
+        { repoName, commit }: GiteeModelProviderArgs
     ): string {
-        return `https://gitee.com/modelee/${repoName}/raw/${
+        return `https://gitee.com/hf-models/${repoName}/raw/${
             commit ?? revision ?? "main"
         }/${path}`;
     }

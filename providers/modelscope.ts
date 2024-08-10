@@ -5,7 +5,7 @@ interface ModelscopeProviderArgs {
     commit?: string;
 }
 
-export class ModelscopeProvider implements IProvider {
+export default class ModelscopeProvider implements IProvider {
     identifier = "modelscope";
 
     toProviderUrl(

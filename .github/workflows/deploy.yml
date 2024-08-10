@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.5.1'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install
+        
+      - name: Build
+        run: |
+          npm run build
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+      - name: Publish with Wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: pages deploy dist --project-name=oystermercury-hfredir
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
