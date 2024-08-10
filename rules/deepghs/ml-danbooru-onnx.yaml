@@ -1,0 +1,9 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/deepghs-ml-danbooru-onnx
+  - provider: gitcode
+    args:
+      repoName: spectator2639/deepghs-ml-danbooru-onnx

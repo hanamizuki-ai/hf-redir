@@ -1,0 +1,12 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: AI-ModelScope/bert-base-uncased
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/bert-base-uncased
+  - provider: modelee
+    args:
+      repoName: bert-base-uncased

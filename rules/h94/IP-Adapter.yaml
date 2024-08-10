@@ -1,0 +1,9 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/h94-ip-adapter
+  - provider: gitcode
+    args:
+      repoName: spectator2639/h94-ip-adapter
