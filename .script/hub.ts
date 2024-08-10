@@ -18,6 +18,10 @@ export async function getFiles(repoId: string, revision: string) {
         credentials: { accessToken: HF_TOKEN },
     });
     for await (const file of remoteFiles) {
+        if (file.type !== "file") {
+            continue;
+        }
+        
         let sha256 = file.lfs?.oid;
 
         if (!sha256) {
