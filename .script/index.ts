@@ -5,11 +5,14 @@ import { readFile, mkdir, writeFile, rm } from "fs/promises";
 import { parse } from "yaml";
 import type { IProvider, Resolution, ResolutionFile, Rule } from "./interfaces";
 import { getFiles } from "./hub";
+import { loadCache, saveCache } from "./cache";
 
 const root = resolve(fileURLToPath(import.meta.url), "../..")
 
 async function main() {
     console.log(root);
+
+    await loadCache();
 
     const providers: Record<string, IProvider> = {};
 
@@ -67,6 +70,8 @@ async function main() {
         }
 
     }
+
+    await saveCache();
 }
 
 main();

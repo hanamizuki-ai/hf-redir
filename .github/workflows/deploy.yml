@@ -23,6 +23,13 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+
+      - name: Cache SHA256
+        id: cache-sha256
+        uses: actions/cache@v4
+        with:
+            path: .script/cache.json
+            key: sha256-node-${{ hashFiles('**/package-lock.json') }}
         
       - name: Build
         run: |
