@@ -1,0 +1,9 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/yzd-v-dwpose
+  - provider: gitee_models
+    args:
+      repoName: DWPose

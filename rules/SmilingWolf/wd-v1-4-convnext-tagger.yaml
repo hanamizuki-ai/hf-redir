@@ -1,0 +1,10 @@
+revisions: 
+  - main
+  - v1.0
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/smilingwolf-wd-v1-4-convnext-tagger
+  - provider: gitcode
+    args:
+      repoName: spectator2639/smilingwolf-wd-v1-4-convnext-tagger

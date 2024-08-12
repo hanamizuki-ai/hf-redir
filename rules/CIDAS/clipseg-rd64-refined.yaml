@@ -1,0 +1,9 @@
+revisions: 
+  - main
+destination:
+  - provider: gitee_models
+    args:
+      repoName: clipseg-rd64-refined
+  - provider: modelee
+    args:
+      repoName: clipseg-rd64-refined

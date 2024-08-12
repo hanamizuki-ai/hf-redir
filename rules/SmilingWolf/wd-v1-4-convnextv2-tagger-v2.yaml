@@ -1,0 +1,10 @@
+revisions: 
+  - main
+  - v2.0
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/smilingwolf-wd-v1-4-convnextv2-tagger-v2
+  - provider: gitcode
+    args:
+      repoName: spectator2639/smilingwolf-wd-v1-4-convnextv2-tagger-v2

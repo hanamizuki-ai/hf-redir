@@ -1,0 +1,6 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/clip-vit-h-14-laion2b-s32b-b79k

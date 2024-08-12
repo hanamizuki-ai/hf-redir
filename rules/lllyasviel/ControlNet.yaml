@@ -1,0 +1,6 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: hanamizukiai/lllyasviel-controlnet
