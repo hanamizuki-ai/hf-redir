@@ -1,0 +1,13 @@
+revisions: 
+  - main
+destination:
+  - provider: modelscope
+    args:
+      repoName: AI-ModelScope/t5-v1_1-xxl
+      commit: master
+  - provider: modelee
+    args:
+      repoName: t5-v1_1-xxl
+  - provider: gitee_models
+    args:
+      repoName: t5-v1_1-xxl

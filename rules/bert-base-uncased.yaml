@@ -4,6 +4,7 @@ destination:
   - provider: modelscope
     args:
       repoName: AI-ModelScope/bert-base-uncased
+      commit: master
   - provider: modelscope
     args:
       repoName: hanamizukiai/bert-base-uncased
